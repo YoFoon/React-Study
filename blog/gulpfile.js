@@ -53,12 +53,12 @@ gulp.task('sassmin', function (done) {
 
 gulp.task('sassmin-dev', function() {
     return gulp.src('./src/css/**/*.scss') //匹配文件
-        .pipe(sourcemaps.init())
+        //.pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
-        .pipe(autoprefixer({               //进行浏览器兼容
-            browsers: ['last 10 versions']
-        }))
-        .pipe(sourcemaps.write('./'))
+        // .pipe(autoprefixer({               //进行浏览器兼容
+        //     browsers: ['last 10 versions']
+        // }))
+        //.pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('./dist/css'));    //输出压缩好的新css文件
 });
 //将js加上10位md5,并修改html中的引用路径，该动作依赖build-js
@@ -128,7 +128,7 @@ gulp.task('watch', function (done) {
 gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
-            baseDir: "./build"
+            baseDir: "./"
         }
     });
 });

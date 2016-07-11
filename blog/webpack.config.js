@@ -3,6 +3,7 @@ var path = require('path');
 var webpack = require('webpack');
 var fs = require('fs');
 var uglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
+var node_modules_dir = path.join(__dirname, 'node_modules');
 
 var srcDir = path.resolve(process.cwd(), 'src');
 
@@ -12,6 +13,7 @@ function getEntry() {
     var dirs = fs.readdirSync(jsPath);
     var matchs = [], files = {};
     dirs.forEach(function (item) {
+        console.log(item);
         matchs = item.match(/(.+)\.js$/);
         //console.log(matchs);
         if (matchs) {
@@ -21,6 +23,10 @@ function getEntry() {
     //console.log(JSON.stringify(files));
     return files;
 }
+
+var deps = [ 
+  'jquery/dist/jquery.min.js'
+];
 
 var config = {
     cache: true,
@@ -34,7 +40,7 @@ var config = {
     },
     resolve: {
         alias: {
-            jquery: srcDir + "/js/lib/jquery.min.js",
+            //jquery: srcDir + "/js/lib/jquery.min.js",
         }
     },
     module: {
@@ -46,7 +52,7 @@ var config = {
             { 
                 test: /\.jsx?$/,
                 loader: 'babel-loader',
-                include: /sec/,
+                include: /src/,
                 query: {
                   presets:['react','es2015']
                 }
@@ -63,6 +69,19 @@ var config = {
     ]
 };
 
-console.log(config);
+function setAlias() {
+    var matchs = [];
+    deps.forEach(function (dep) {
+      var depPath = path.resolve(node_modules_dir, dep);
+      var item = dep.split("/");
+      item = item[item.length-1].split(".")[0];
+      console.log(item);
+      config.resolve.alias[item] = depPath;
+      config.module.noParse.push(depPath);
+    });
+}
+setAlias();
+
+console.log(config)
 
 module.exports = config;
