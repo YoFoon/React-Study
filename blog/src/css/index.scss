@@ -1,7 +1,75 @@
-body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd,select,input{margin:0;padding:0;}
-body{font-size:12px;}
-img{border:none;vertical-align:top;}
-table{border-collapse:collapse;}
-ul,ol{list-style:none;}
-textarea{resize:none;overflow:auto;}
-a{text-decoration: none;}
+.main-container{
+    height: 100%;
+    .fullPage{
+        @extend .main-container;
+        background: #FFF url(/dist/images/blog-bg.jpg) center/cover no-repeat fixed;
+        background-size: 100% 100%;
+    }
+    .proFile{
+        text-align: center;
+        margin-top: 12rem;
+    }
+    .photo{
+        a{
+            display: block;
+            color: #333;
+            text-decoration: none;
+        }
+        img{
+            display: inline-block;
+            margin: 0 auto;
+            width: 8rem;
+            border: 2px solid rgba(50, 50, 50, 0.1);
+            box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+        }
+    }
+    h3{
+        margin-top: 2rem;
+        font-size: 2.4rem;
+    }
+    p{
+        color: #333;
+        font-size: 16px;
+    }
+    .navigation{
+        .nav-li{
+            display: inline-block;
+            margin: 0 5px 5px;
+            border-radius: 20px;
+            border: 1px solid #666;
+            line-height: 1rem;
+            transition: transform 0.5s;
+        }
+        a{
+            padding: .625rem 1.25rem;
+            display: block;
+            opacity: .8;
+            color: #333;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    }
+    .my-links{
+        .link-li{
+            display: inline-block;
+            margin: 20px 10px 5px;
+            transition: transform 0.5s;
+        }
+        a{
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            &.github-icon{
+                background: #FFF url(/dist/images/github.png) no-repeat;
+                background-size: 100% 100%;
+            }
+            &.weibo-icon{
+                background: #FFF url(/dist/images/weibo.png) no-repeat;
+                background-size: 100% 100%;
+            }
+        }
+    }
+}

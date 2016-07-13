@@ -39,7 +39,7 @@ gulp.task('copy:images', function (done) {
 
 //压缩合并css, css中既有自己写的.less, 也有引入第三方库的.css
 gulp.task('sassmin', function (done) {
-    return gulp.src(['src/css/*.scss']) //匹配文件
+    return gulp.src(['src/css/**/*']) //匹配文件
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer({               //进行浏览器兼容
             browsers: ['last 10 versions']
@@ -52,7 +52,7 @@ gulp.task('sassmin', function (done) {
 });
 
 gulp.task('sassmin-dev', function() {
-    return gulp.src('./src/css/**/*.scss') //匹配文件
+    return gulp.src('./src/css/**/*') //匹配文件
         //.pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         // .pipe(autoprefixer({               //进行浏览器兼容
@@ -120,7 +120,8 @@ gulp.task('img-res',function(){
 })
 
 gulp.task('watch', function (done) {
-    gulp.watch('src/**/*', ['sassmin', 'build-js', 'fileinclude','copy:images'])
+    gulp.watch('src/**/*', ['sassmin-dev', 'build-js', 'fileinclude','copy:images'])
+        .on('change', reload)
         .on('end', done);
 });
 
@@ -143,4 +144,4 @@ gulp.task('browser-sync', function() {
 //发布
 gulp.task('default', ['fileinclude', 'md5:css', 'md5:js', ,'img-res']);
 //开发
-gulp.task('dev', ['browser-sync', 'copy:images', 'fileinclude',  'build-js', 'watch']);
+gulp.task('dev', ['browser-sync', 'copy:images','sassmin-dev', 'fileinclude',  'build-js', 'watch']);

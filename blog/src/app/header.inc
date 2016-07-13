@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
+<meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="renderer" content="webkit">
 <meta name="description" content="YoFoon's 个人博客">
@@ -12,12 +9,3 @@
 <link rel="shortcut icon" type="image/x-icon" href="/dist/images/icon.ico" media="screen">
 <link rel="stylesheet" href="/dist/css/antd.min.css">
 <link rel="stylesheet" href="/dist/css/base.css">
-	<title>welcome</title>
-	<link rel="stylesheet" href="/dist/css/index.css">
-</head>
-<body>
-	<div id="app" class="main-container"></div>
-	<script type="text/javascript" src="/dist/js/common.js"></script>
-	<script type="text/javascript" src="/dist/js/index.js"></script>
-</body>
-</html>
