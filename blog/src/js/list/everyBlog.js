@@ -14,9 +14,9 @@ export default class EveryBlog extends React.Component {
                     123456
                 </article>
                 <div className="meta">
-                    <span className="time"></span>
-                    <span className="tag">on<a></a></span>
-                    <span className="read"></span>
+                    <span className="time">2016-07-14</span>
+                    <span className="tag">on<a>Blog</a></span>
+                    <span className="read">4 Read</span>
                 </div>
             </div>  
         );

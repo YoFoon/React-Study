@@ -628,7 +628,7 @@ webpackJsonp([2],{
 	    _createClass(EveryBlog, [{
 	        key: "render",
 	        value: function render() {
-	            return _react2.default.createElement("div", { className: "eachBlog" }, _react2.default.createElement("h2", { className: "title" }, _react2.default.createElement("a", null, "JS 中禁用输入法")), _react2.default.createElement("article", null, "123456"), _react2.default.createElement("div", { className: "meta" }, _react2.default.createElement("span", { className: "time" }), _react2.default.createElement("span", { className: "tag" }, "on", _react2.default.createElement("a", null)), _react2.default.createElement("span", { className: "read" })));
+	            return _react2.default.createElement("div", { className: "eachBlog" }, _react2.default.createElement("h2", { className: "title" }, _react2.default.createElement("a", null, "JS 中禁用输入法")), _react2.default.createElement("article", null, "123456"), _react2.default.createElement("div", { className: "meta" }, _react2.default.createElement("span", { className: "time" }, "2016-07-14"), _react2.default.createElement("span", { className: "tag" }, "on", _react2.default.createElement("a", null, "Blog")), _react2.default.createElement("span", { className: "read" }, "4 Read")));
 	        }
 	    }]);
 	
