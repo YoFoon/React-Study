@@ -1,0 +1,10 @@
+.eachBlog {
+  line-height: 1.6rem;
+  margin-bottom: 4.16667rem; }
+  .eachBlog .title {
+    margin-bottom: 1rem;
+    line-height: 3rem;
+    font-size: 2rem;
+    transition: all 350ms; }
+    .eachBlog .title a {
+      color: #333; }

@@ -7,5 +7,3 @@
 <meta name="robots" content="all">
 <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
 <link rel="shortcut icon" type="image/x-icon" href="/dist/images/icon.ico" media="screen">
-<link rel="stylesheet" href="/dist/css/antd.min.css">
-<link rel="stylesheet" href="/dist/css/base.css">

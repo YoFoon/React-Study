@@ -1,23 +1,24 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { Row, Col } from 'antd';
 
-class App extends React.Component {
+export default class SideNav extends React.Component {
+    
     constructor(props) {
         super(props);
     }
+    
     render() {
 
         let arrLi = [];
         let arrName = ["Home","Blog","Work","Life","Book"];
         var arrHref = ['/view','/view/list.html','/view/list.html','/view/list.html','/view/list.html'];
         for( let i = 0, arrLen = arrName.length; i < arrLen; i++ ){
-            arrLi.push(<Col xs={{span: 12}} sm={{span: 12}} md={{span: 4}} className="nav-li" key={arrName[i]}><a href={arrHref[i]}>{arrName[i]}</a></Col>)
+            arrLi.push(<Col xs={{span: 12}} sm={{span: 12}} md={{span: 12}} className="nav-li" key={arrName[i]}><a href={arrHref[i]}>{arrName[i]}</a></Col>)
         }
 
         return (
-            <Row className="fullPage">
-                <Col xs={{span: 22, offset:1}} sm={{span: 22, offset:1}} md={{span: 8, offset:8}} className="proFile">
+            <Row className="side-nav">
+                <Col xs={{span: 22, offset:1}} sm={{span: 22, offset:1}} md={{span: 22, offset:1}} className="proFile">
                     <a href="#" className="photo">
                         <img src="/dist/images/blog-head.jpg" />
                     </a>
@@ -37,5 +38,3 @@ class App extends React.Component {
         );
     }
 }
-
-ReactDOM.render(<App />, document.getElementById('app'));

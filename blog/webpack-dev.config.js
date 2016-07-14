@@ -30,7 +30,7 @@ var deps = [
 
 var config = {
     cache: true,
-    devtool: false,
+    devtool: "source-map",
     entry: getEntry(),
     output: {
         path: path.join(__dirname, "dist/js/"),

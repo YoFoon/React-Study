@@ -9,18 +9,21 @@ var gulp = require('gulp'),
     fileinclude = require('gulp-file-include'),
     spriter = require('gulp-css-spriter'),
     base64 = require('gulp-css-base64'),
+    clean = require('gulp-clean'),
     browserSync = require('browser-sync').create(),
     reload      = browserSync.reload,
     sourcemaps = require('gulp-sourcemap'),
+    runSequence = require('run-sequence');
     webpack = require('webpack'),
     webpackConfig = require('./webpack.config.js');
+    webpackDevConfig = require('./webpack-dev.config.js');
 
-var myDevConfig = Object.create(webpackConfig);
 
-var devCompiler = webpack(myDevConfig);
 
-//引用webpack对js进行操作
+//引用webpack对js进行操作(生产环境)
 gulp.task("build-js", function(callback) {
+    var myDevConfig = Object.create(webpackConfig);
+    var devCompiler = webpack(myDevConfig);
     devCompiler.run(function(err, stats) {
         if(err) throw new gutil.PluginError("webpack:build-js", err);
         gutil.log("[webpack:build-js]", stats.toString({
@@ -29,6 +32,20 @@ gulp.task("build-js", function(callback) {
         callback();
     });
 });
+
+//引用webpack对js进行操作(开发环境)
+gulp.task("build-dev-js", function(callback) {
+    var myDevConfig = Object.create(webpackDevConfig);
+    var devCompiler = webpack(myDevConfig);
+    devCompiler.run(function(err, stats) {
+        if(err) throw new gutil.PluginError("webpack:build-js", err);
+        gutil.log("[webpack:build-js]", stats.toString({
+            colors: true
+        }));
+        callback();
+    });
+});
+
 
 //将图片拷贝到目标目录
 gulp.task('copy:images', function (done) {
@@ -120,7 +137,7 @@ gulp.task('img-res',function(){
 })
 
 gulp.task('watch', function (done) {
-    gulp.watch('src/**/*', ['sassmin-dev', 'build-js', 'fileinclude','copy:images'])
+    gulp.watch('src/**/*', ['sassmin-dev', 'build-dev-js', 'fileinclude','copy:images'])
         .on('change', reload)
         .on('end', done);
 });
@@ -142,6 +159,11 @@ gulp.task('browser-sync', function() {
 });*/
 
 //发布
-gulp.task('default', ['fileinclude', 'md5:css', 'md5:js', ,'img-res']);
+gulp.task('default', function() {
+  runSequence(
+    'clean',
+    ['fileinclude', 'md5:css', 'md5:js', ,'img-res']
+  )
+})
 //开发
-gulp.task('dev', ['browser-sync', 'copy:images','sassmin-dev', 'fileinclude',  'build-js', 'watch']);
+gulp.task('dev', ['browser-sync', 'copy:images','sassmin-dev', 'fileinclude',  'build-dev-js', 'watch']);
