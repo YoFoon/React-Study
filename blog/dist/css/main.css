@@ -39,6 +39,12 @@ html {
 .long-line {
   width: 100%; }
 
+.rela {
+  position: relative; }
+
+.abso {
+  position: absolute; }
+
 .mt1 {
   margin-top: 1rem; }
 

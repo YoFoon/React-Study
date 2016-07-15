@@ -1,3 +1,11 @@
+.abso-layout {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto; }
+
 .eachBlog {
   line-height: 1.6rem;
   margin-bottom: 4.16667rem; }

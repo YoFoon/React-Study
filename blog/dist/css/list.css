@@ -39,6 +39,12 @@ html {
 .long-line {
   width: 100%; }
 
+.rela {
+  position: relative; }
+
+.abso {
+  position: absolute; }
+
 .mt1 {
   margin-top: 1rem; }
 
@@ -279,6 +285,14 @@ html {
   20%, 40%, 60%, 80% {
     transform: rotate(4deg);
     transform-origin: 50% 100%; } }
+
+.abso-layout {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto; }
 
 .eachBlog {
   line-height: 1.6rem;

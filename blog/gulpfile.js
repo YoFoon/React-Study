@@ -9,11 +9,9 @@ var gulp = require('gulp'),
     fileinclude = require('gulp-file-include'),
     spriter = require('gulp-css-spriter'),
     base64 = require('gulp-css-base64'),
-    clean = require('gulp-clean'),
     browserSync = require('browser-sync').create(),
     reload      = browserSync.reload,
     sourcemaps = require('gulp-sourcemap'),
-    runSequence = require('run-sequence');
     webpack = require('webpack'),
     webpackConfig = require('./webpack.config.js');
     webpackDevConfig = require('./webpack-dev.config.js');
@@ -123,12 +121,6 @@ gulp.task('sprite', ['copy:images', 'sassmin'], function (done) {
         .on('end', done);
 });
 
-gulp.task('clean', function (done) {
-    gulp.src(['dist'])
-        .pipe(clean())
-        .on('end', done);
-});
-
 //上传前图片压缩
 gulp.task('img-res',function(){
    return gulp.src(['src/images/**/*'])
@@ -159,11 +151,6 @@ gulp.task('browser-sync', function() {
 });*/
 
 //发布
-gulp.task('default', function() {
-  runSequence(
-    'clean',
-    ['fileinclude', 'md5:css', 'md5:js', ,'img-res']
-  )
-})
+gulp.task('default', ['fileinclude', 'md5:css', 'md5:js', 'img-res']);
 //开发
 gulp.task('dev', ['browser-sync', 'copy:images','sassmin-dev', 'fileinclude',  'build-dev-js', 'watch']);

@@ -14,8 +14,8 @@ class BlogList extends React.Component {
     render() {
         return(
             <Row className="fullPage">
-                <Col xs={{span:1}} sm={{span:1}} md={{span:4}} className="H100" className="hidden-sm hidden-xs"><SideNav /></Col>
-                <Col xs={{span: 22}} sm={{span: 22}} md={{span: 20}} className="H100"><ListPage /></Col>
+                <Col md={{span:4}} className="H100 hidden-sm hidden-xs"><SideNav /></Col>
+                <Col xs={{span: 24}} sm={{span: 24}} md={{span: 20}} className="H100 rela"><ListPage /></Col>
             </Row>
         )
     }

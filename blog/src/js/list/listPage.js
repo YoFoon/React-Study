@@ -27,7 +27,7 @@ export default class ListPage extends React.Component {
             }
         }
         return (
-            <Row>
+            <Row className="abso-layout">
                 <Col span={22} offset={1} className="pt2 pb2">{arrArti}</Col>
             </Row>
         );

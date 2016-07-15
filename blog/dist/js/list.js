@@ -43,14 +43,6 @@ webpackJsonp([2],{
 	    return obj && obj.__esModule ? obj : { default: obj };
 	}
 	
-	function _defineProperty(obj, key, value) {
-	    if (key in obj) {
-	        Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });
-	    } else {
-	        obj[key] = value;
-	    }return obj;
-	}
-	
 	function _classCallCheck(instance, Constructor) {
 	    if (!(instance instanceof Constructor)) {
 	        throw new TypeError("Cannot call a class as a function");
@@ -81,7 +73,7 @@ webpackJsonp([2],{
 	    _createClass(BlogList, [{
 	        key: 'render',
 	        value: function render() {
-	            return _react2.default.createElement(_row2.default, { className: 'fullPage' }, _react2.default.createElement(_col2.default, _defineProperty({ xs: { span: 1 }, sm: { span: 1 }, md: { span: 4 }, className: 'H100' }, 'className', 'hidden-sm hidden-xs'), _react2.default.createElement(_sideNav2.default, null)), _react2.default.createElement(_col2.default, { xs: { span: 22 }, sm: { span: 22 }, md: { span: 20 }, className: 'H100' }, _react2.default.createElement(_listPage2.default, null)));
+	            return _react2.default.createElement(_row2.default, { className: 'fullPage' }, _react2.default.createElement(_col2.default, { md: { span: 4 }, className: 'H100 hidden-sm hidden-xs' }, _react2.default.createElement(_sideNav2.default, null)), _react2.default.createElement(_col2.default, { xs: { span: 24 }, sm: { span: 24 }, md: { span: 20 }, className: 'H100 rela' }, _react2.default.createElement(_listPage2.default, null)));
 	        }
 	    }]);
 	
@@ -560,7 +552,7 @@ webpackJsonp([2],{
 	                    arrArti.push(_react2.default.createElement(_everyBlog2.default, { key: i }));
 	                }
 	            }
-	            return _react2.default.createElement(_row2.default, null, _react2.default.createElement(_col2.default, { span: 22, offset: 1, className: 'pt2 pb2' }, arrArti));
+	            return _react2.default.createElement(_row2.default, { className: 'abso-layout' }, _react2.default.createElement(_col2.default, { span: 22, offset: 1, className: 'pt2 pb2' }, arrArti));
 	        }
 	    }]);
 	

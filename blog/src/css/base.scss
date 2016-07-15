@@ -5,13 +5,11 @@ table{border-collapse:collapse;}
 ul,ol{list-style:none;}
 textarea{resize:none;overflow:auto;}
 a{text-decoration: none;}
-html{
-    font-size: 62.5%;
-}
+html{font-size: 62.5%;}
+
 $H100: 100%;
-.H100{
-    height: $H100
-}
+
+.H100{height: $H100}
 .main-container{
     @extend .H100;
 }
@@ -22,12 +20,12 @@ $H100: 100%;
     margin: 10px auto;
     border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
-.short-line{
-    width: 20rem;
-}
-.long-line{
-    width: $H100;
-}
+
+.short-line{width: 20rem;}
+.long-line{width: $H100;}
+.rela{position: relative;}
+.abso{position: absolute;}
+
 .mt1{margin-top: 1rem;}
 .mr1{margin-right: 1rem;}
 .mb1{margin-bottom: 1rem}
