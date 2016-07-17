@@ -31,6 +31,8 @@ webpackJsonp([2],{
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 	
+	var _reactRouter = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"react-router\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	
 	var _sideNav = __webpack_require__(179);
 	
 	var _sideNav2 = _interopRequireDefault(_sideNav);
@@ -80,7 +82,7 @@ webpackJsonp([2],{
 	    return BlogList;
 	}(_react2.default.Component);
 	
-	_reactDom2.default.render(_react2.default.createElement(BlogList, null), document.getElementById('app'));
+	_reactDom2.default.render(_react2.default.createElement(_reactRouter.Router, { history: _reactRouter.hashHistory }, _react2.default.createElement(_reactRouter.Route, { path: '/', component: BlogList }), _react2.default.createElement(_reactRouter.Route, { path: '/depail/:tile', component: _listPage2.default })), document.getElementById('app'));
 
 /***/ },
 

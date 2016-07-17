@@ -1,15 +1,15 @@
-webpackJsonp([1],{
+webpackJsonp([2],{
 
 /***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _row = __webpack_require__(173);
+	var _row = __webpack_require__(237);
 	
 	var _row2 = _interopRequireDefault(_row);
 	
-	var _col = __webpack_require__(178);
+	var _col = __webpack_require__(242);
 	
 	var _col2 = _interopRequireDefault(_col);
 	
@@ -68,7 +68,7 @@ webpackJsonp([1],{
 	
 	            var arrLi = [];
 	            var arrName = ["Home", "Blog", "Work", "Life", "Book"];
-	            var arrHref = ['/view', '/view/list.html', '/view/list.html', '/view/list.html', '/view/list.html'];
+	            var arrHref = ['/view', '/view/blog', '/view/blog', '/view/blog', '/view/blog'];
 	            for (var i = 0, arrLen = arrName.length; i < arrLen; i++) {
 	                arrLi.push(_react2.default.createElement(_col2.default, { xs: { span: 12 }, sm: { span: 12 }, md: { span: 4 }, className: 'nav-li', key: arrName[i] }, _react2.default.createElement('a', { href: arrHref[i] }, arrName[i])));
 	            }
@@ -84,7 +84,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 173:
+/***/ 237:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -93,14 +93,14 @@ webpackJsonp([1],{
 	  value: true
 	});
 	
-	var _layout = __webpack_require__(174);
+	var _layout = __webpack_require__(238);
 	
 	exports["default"] = _layout.Row;
 	module.exports = exports['default'];
 
 /***/ },
 
-/***/ 174:
+/***/ 238:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -110,11 +110,11 @@ webpackJsonp([1],{
 	});
 	exports.Col = exports.Row = undefined;
 	
-	var _row = __webpack_require__(175);
+	var _row = __webpack_require__(239);
 	
 	var _row2 = _interopRequireDefault(_row);
 	
-	var _col = __webpack_require__(177);
+	var _col = __webpack_require__(241);
 	
 	var _col2 = _interopRequireDefault(_col);
 	
@@ -125,7 +125,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 175:
+/***/ 239:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -143,7 +143,7 @@ webpackJsonp([1],{
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(176);
+	var _classnames = __webpack_require__(240);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -224,7 +224,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 176:
+/***/ 240:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -279,7 +279,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 177:
+/***/ 241:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -298,7 +298,7 @@ webpackJsonp([1],{
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(176);
+	var _classnames = __webpack_require__(240);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -363,7 +363,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 178:
+/***/ 242:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -372,7 +372,7 @@ webpackJsonp([1],{
 	  value: true
 	});
 	
-	var _layout = __webpack_require__(174);
+	var _layout = __webpack_require__(238);
 	
 	exports["default"] = _layout.Col;
 	module.exports = exports['default'];

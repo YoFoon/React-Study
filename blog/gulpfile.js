@@ -94,7 +94,7 @@ gulp.task('md5:css',['sassmin'], /*['sprite'],*/ function (done) {
 
 //用于在html文件中直接include文件
 gulp.task('fileinclude', function (done) {
-    gulp.src(['src/app/*.html'])
+    gulp.src(['src/app/**/*.html'])
         .pipe(fileinclude({
           prefix: '@@',
           basepath: '@file'

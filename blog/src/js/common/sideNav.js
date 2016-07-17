@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row, Col } from 'antd';
+import { Link } from 'react-router'
 
 export default class SideNav extends React.Component {
     
@@ -11,9 +12,13 @@ export default class SideNav extends React.Component {
 
         let arrLi = [];
         let arrName = ["Home","Blog","Work","Life","Book"];
-        var arrHref = ['/view','/view/list.html','/view/list.html','/view/list.html','/view/list.html'];
+        var arrHref = ['/view','/','/','/','/'];
         for( let i = 0, arrLen = arrName.length; i < arrLen; i++ ){
-            arrLi.push(<Col xs={{span: 12}} sm={{span: 12}} md={{span: 12}} className="nav-li" key={arrName[i]}><a href={arrHref[i]}>{arrName[i]}</a></Col>)
+            if( i == 0 ) {
+                arrLi.push(<Col xs={{span: 12}} sm={{span: 12}} md={{span: 12}} className="nav-li" key={arrName[i]}><a href={arrHref[i]}>{arrName[i]}</a></Col>);
+                continue;
+            }
+            arrLi.push(<Col xs={{span: 12}} sm={{span: 12}} md={{span: 12}} className="nav-li" key={arrName[i]}><Link to={arrHref[i]}>{arrName[i]}</Link></Col>)
         }
 
         return (

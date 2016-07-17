@@ -10,7 +10,7 @@ class App extends React.Component {
 
         let arrLi = [];
         let arrName = ["Home","Blog","Work","Life","Book"];
-        var arrHref = ['/view','/view/list.html','/view/list.html','/view/list.html','/view/list.html'];
+        var arrHref = ['/view','/view/blog','/view/blog','/view/blog','/view/blog'];
         for( let i = 0, arrLen = arrName.length; i < arrLen; i++ ){
             arrLi.push(<Col xs={{span: 12}} sm={{span: 12}} md={{span: 4}} className="nav-li" key={arrName[i]}><a href={arrHref[i]}>{arrName[i]}</a></Col>)
         }
