@@ -8,16 +8,17 @@ export default class EveryBlog extends React.Component {
     }
     
     render() {
+        
+        let item = this.props.item;
+
         return(
             <div className="eachBlog">
-                <h2 className="title"><Link to="/depail/YoFoon">JS 中禁用输入法</Link></h2>
-                <article>
-                    123456
-                </article>
+                <h2 className="title"><Link to={"/depail/"+item._id}>{item.title}</Link></h2>
+                <article dangerouslySetInnerHTML={{__html: item.post}}></article>
                 <div className="meta">
-                    <span className="time">2016-07-14</span>
-                    <span className="tag">on<a>Blog</a></span>
-                    <span className="read">4 Read</span>
+                    <span className="time">{item.time.day}</span>
+                    <span className="tag">on<a>{item.tags}</a></span>
+                    <span className="read">{item.read} Read</span>
                 </div>
             </div>  
         );

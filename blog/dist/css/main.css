@@ -75,6 +75,18 @@ html {
 .pb2 {
   padding-bottom: 2rem; }
 
+.footer {
+  display: block;
+  padding: 2em 0 0;
+  font-size: .7em;
+  color: #b3b3b3;
+  border-top: 2px solid #ddd; }
+  .footer p {
+    margin-bottom: .7em; }
+    .footer p a {
+      text-decoration: underline;
+      color: #a6a6a6; }
+
 .main-container .fullPage {
   height: 100%;
   background: #FFF url(/dist/images/blog-bg.jpg) center/cover no-repeat fixed;
