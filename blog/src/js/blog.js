@@ -8,6 +8,8 @@ import Detail from "./detail/index";
 ReactDOM.render((
   <Router history={hashHistory}>
     <Route path="/" component={BlogList}/>
-    <Route path="/depail/:title" component={Detail}/>
+    <Route path="/detail/:title" component={Detail}/>
   </Router>
 ), document.getElementById('app'));
+
+//ReactDOM.render(<Router  routes={Rou} history={hashHistory} />,document.getElementById('app'));

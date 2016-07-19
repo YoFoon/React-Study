@@ -1,6 +1,6 @@
 const Router = {
   path: '/',
-  component: app,
+  component: BlogList,
   childRoutes: [
     { path: 'detail/:id', component: '../detail/index' }
   ]

@@ -7,6 +7,7 @@ import SideNav from '../common/sideNav';
 import Article from './article';
 import Comment from "./comment";
 import ROUTER from '../router/server';
+import Pinyin from '../common/pinyin';
 
 export default class BlogDetail extends React.Component {
 

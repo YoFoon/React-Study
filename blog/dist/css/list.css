@@ -337,7 +337,7 @@ html {
       border-radius: .25rem;
       background-color: rgba(234, 97, 83, 0.7); }
 
-#ds-thread #ds-reset .ds-meta, #ds-thread #ds-reset .ds-powered-by, .ds-toolbar-buttons {
+#ds-thread #ds-reset .ds-meta, #ds-thread #ds-reset .ds-powered-by, .ds-toolbar-buttons, .ds-dialog-footer {
   display: none; }
 
 .header {
